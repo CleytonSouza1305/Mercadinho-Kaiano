@@ -48,7 +48,7 @@ function atualizarListaProdutos() {
       peso.classList = 'peso'
       peso.innerHTML = 'Peso: ' + products[i].peso
 
-      detailsDiv.append(price, '|', peso)
+      detailsDiv.append(price, ' | ', peso)
 
       const quantidadeDiv = document.createElement('div')
       quantidadeDiv.className = 'quantidade-group'
