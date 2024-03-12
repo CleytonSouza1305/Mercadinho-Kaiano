@@ -1,0 +1,134 @@
+:root {
+   --primary-color: #0074D9;
+   --secundary-color: #FFD700;
+   --blue: #001F3F;
+   --yellow: #FFDB58;
+   --white: #f4f4f4;
+   --black: #232527;
+   --title-font: 'Peanut Butter', 'Arial', Helvetica; 
+}
+
+@font-face {
+   font-family: 'Peanut Butter';
+   src: url(../fonts/Peanut\ Butter.otf); format:('opentype');
+   font-weight: normal;
+}
+
+
+main {
+   background-image: linear-gradient(150deg, var(--blue) 65%, var(--primary-color));
+   height: 100vh;
+}
+
+main {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.container {
+   background-color: var(--white);
+   color: var(--black);
+   box-shadow: 0 0 10px 5px rgb(244, 244, 244, 0.8);
+   border-radius: 0.5rem;
+   padding: 0.5rem 1rem 1rem;
+}
+
+.input-group {
+   padding: 0.7rem 0;
+}
+
+h1 {
+   text-align: center;
+   margin-bottom: 0.8rem;
+   font-family: var(--title-font);
+   font-size: 5rem;
+   letter-spacing: 0.7rem;
+   color: var(--yellow);
+   text-shadow: 2px 2px 0px var(--black);
+}
+
+section {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+}
+
+label {
+   margin-right: 0.5rem;
+   transition: all 300ms;
+}
+
+label:hover {
+   color: var(--primary-color);
+}
+
+input {
+   outline: none;
+   border-top: none;
+   border-right: none;
+   border-left: none;
+   border-bottom: 1.5px solid var(--black);
+   padding: 5px 2px;
+   background-color: transparent;
+}
+
+input:focus {
+   border-color: var(--primary-color);
+   font-size: 15px;
+}
+
+input:focus::placeholder {
+   color: var(--primary-color);
+}
+
+.button-dad {
+   background-color: red;
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-top: 1rem;
+   border-radius: 6px;
+}
+
+button {
+   --button_radius: 0.75em;
+   --button_color: #e8e8e8;
+   --button_outline_color: #000000;
+   font-size: 10px;
+   font-weight: bold;
+   border: none;
+   border-radius: 6px;
+   background: var(--blue);
+   width: 100%;
+ }
+
+ button:hover {
+   background-color: hsl(208, 100%, 33%);
+ }
+ 
+ .button_top {
+   display: block;
+   box-sizing: border-box;
+   border: 1px solid var(--blue);
+   border-radius: 6px;
+   padding: 0.75em 1.5em;
+   background: var(--primary-color);
+   color: var(--white);
+   transform: translateY(-0.2em);
+   transition: transform 0.1s ease;
+ }
+ 
+ button:hover .button_top {
+   transform: translateY(-0.40em);
+   background-color: hsl(208, 100%, 33%);
+ }
+ 
+ button:active .button_top {
+   transform: translateY(0);
+ }
+
+ div > p {
+   color: #f64348;
+   font-size: 12px;
+ }

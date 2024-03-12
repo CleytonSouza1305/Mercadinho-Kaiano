@@ -1,0 +1,241 @@
+:root {
+   --primary-color: #0074D9;
+   --secundary-color: #FFD700;
+   --blue: #001F3F;
+   --yellow: #FFDB58;
+   --white: #f4f4f4;
+   --black: #232527;
+   --title-font: 'Peanut Butter', 'Arial', Helvetica; 
+}
+
+@font-face {
+   font-family: 'Peanut Butter';
+   src: url(../fonts/Peanut\ Butter.otf); format:('opentype');
+   font-weight: normal;
+}
+
+body {
+   position: relative;
+}
+
+main {
+   height: 100vh;
+}
+
+header {
+   background-color: var(--white);
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 1rem 1.5rem;
+   box-shadow: 0px 2px 10px 0px var(--black);
+}
+
+h1 {
+   font-family: var(--title-font);
+   font-size: 3rem;
+   letter-spacing: 0.7rem;
+   color: var(--yellow);
+   text-shadow: 2px 2px 0px var(--black);
+}
+
+#circle {
+   width: 7px;
+   height: 7px;
+   background-color: #4caf50;
+   border-radius: 50%;
+   display: inline-block;
+   cursor: pointer;
+   margin-left: 0.5rem;
+}
+
+nav a {
+   font-size: 1.2rem;
+   margin: 0 0.5rem;
+   padding: 0.75rem;
+   transition: ease-in-out 300ms;
+   position: relative;
+}
+
+nav a:hover::after {
+   width: 80%;
+}
+
+nav a::after {
+   content: '';
+   display: block;
+   width: 0%;
+   height: 3px;
+   background-color: var(--blue);
+   border-radius: 0.5rem;
+   position: absolute;
+   bottom: 5px;
+   left: 10px;
+   transition: ease-in-out 300ms;
+}
+
+nav a:hover {
+   color: var(--primary-color);
+}
+
+h3 {
+   color: var(--blue);
+}
+
+#person {
+   color: var(--primary-color);
+}
+
+#register-button, #creat-button {
+   background-color: var(--blue);
+   color: var(--white);
+   padding: 0.7rem;
+   border-radius: 6px;
+}
+
+.dad-btn {
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   margin-top: 1rem;
+   padding: 0 1rem;
+}
+
+.modal {
+   background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.782), rgba(0, 0, 0, 0.627), rgba(0, 0, 0, 0.595));
+   position: absolute;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.window-content {
+   background-color: var(--white);
+   padding: 1rem;
+   border-radius: 6px;
+}
+
+.window-content h2 {
+   text-align: center;
+   font-size: 2rem;
+   margin-bottom: 0.5rem;
+}
+
+.window-content p {
+   text-align: center;
+   margin-bottom: 0.5rem;
+}
+
+.input-group {
+   padding: 0.7rem 0;
+}
+
+label {
+   margin-right: 0.5rem;
+   transition: all 300ms;
+}
+
+label:hover {
+   color: var(--primary-color);
+}
+
+input {
+   outline: none;
+   border-top: none;
+   border-right: none;
+   border-left: none;
+   border-bottom: 1.5px solid var(--black);
+   padding: 5px 2px;
+   background-color: transparent;
+}
+
+input:focus {
+   border-color: var(--primary-color);
+}
+
+input:focus::placeholder {
+   color: var(--primary-color);
+}
+
+.dad-btn i {
+   color: #f64348;
+   font-size: 1.5rem;
+   cursor: pointer;
+}
+
+.display {
+   display: none;
+}
+
+#container-products {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+   margin-top: 5rem;
+   padding: 0 3rem;
+}
+
+.card {
+   width: 350px;
+   text-align: center;
+   margin-top: 2rem;
+   padding: 1.5rem 1rem;
+   background-color: #dfdede;
+   border-radius: 6px;
+}
+
+.card img {
+   width: 100%;
+   object-fit: cover;
+   object-position: center center;
+   border-radius: 3px;
+}
+
+.details {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 1rem;
+   margin: 0 3rem;
+   font-size: 1rem;
+   font-weight: bold;
+}
+
+.quantidade-group {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   margin: 0 7rem;
+}
+
+.quantidade-group i{
+   background-color: var(--primary-color);
+   border-radius: 50%;
+   cursor: pointer;
+   color: var(--white);
+   padding: 5px;
+   font-size: 10px;
+}
+
+.quantidade-group .number {
+   font-size: 1.2rem;
+   font-weight: bold;
+}
+
+#cart-btn {
+   background-color: var(--blue);
+   color: var(--white);
+   width: 30%;
+   border-radius: 6px;
+   padding: 1rem;
+   margin-top: 0.9rem;
+   transition: ease-in-out 300ms;
+}
+
+#cart-btn:hover {
+   background-color: hsl(210, 100%, 22%);
+}
+
