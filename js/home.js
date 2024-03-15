@@ -8,18 +8,24 @@ const cpf = localStorage.getItem('cpf')
 
 const registerBtn = document.getElementById('register-button')
 
-const products = []
+const products = [
+   {picture: 'https://img.freepik.com/fotos-gratis/uvas-suculentas-em-uma-videira-um-sabor-refrescante-da-natureza-gerado-pela-inteligencia-artificial_25030-63003.jpg', nome: 'Uva', price: '20,00', peso: '500g'},
 
-function cadastrarProduct(img, productName, price, pedoProduct) {
-   const produtos = {
-      picture: img,
-      nome: productName,
-      price: price,
-      peso: pedoProduct
-   }
+   {picture: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfNmhPqa0vtypbOkWQCZ1dtWPec3Ay_V1HhA&usqp=CAU', nome: 'Melancia', price: '45,00', peso: '5Kg'},
 
-   products.push(produtos)
-}
+   {picture: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcST1HQ8EGuqCApTNARzi8wm9N_mXhAK6BQSgQ&usqp=CAU', nome: 'Laranja', price: '19,99', peso: '2Kg'},
+
+   {picture: 'https://noticiasconcursos.com.br/wp-content/uploads/2022/02/noticiasconcursos.com.br-como-escolher-banana-no-mercado-conheca-os-tipos-dicas-para-escolher-banana-no-mercado-reproducao-canva.jpg', nome: 'Banana', price: '11,99', peso: '500g'},
+
+   {picture: 'https://cdn.noticiasagricolas.com.br/dbimagens/thumbs/1200x600-ar/7fccc1de0ff9803eae05c77f6d2536ca.jpg', nome: 'Manga', price: '4,99', peso: '1Kg'},
+
+   {picture: 'https://noticiasconcursos.com.br/wp-content/uploads/2022/03/noticiasconcursos.com.br-como-escolher-kiwi-no-mercado-saiba-como-escolher-e-onde-usar-a-fruta-como-escolher-kiwi-no-mercado-saiba-como-escolher-e-onde-usar-a-fruta-reproducao-canva.jpg', nome: 'Kiwi', price: '6,99', peso: '500g'},
+
+   {picture: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbC1KukdEZUSWBHVz_GXrpjHT4qsyi7wJ8GQ&usqp=CAU', nome: 'Morango', price: '09,99', peso: '450g'},
+
+   {picture: 'https://www.hfbrasil.org.br/upload/galeria/thumbnail/0800829001584127068.jpg', nome: 'Mamão', price: '11,99', peso: '1Kg'}
+
+] 
 
 function atualizarListaProdutos() {
    const container = document.getElementById('container-products');
@@ -28,6 +34,7 @@ function atualizarListaProdutos() {
    for (let i = 0; i < products.length; i++) {
       const card = document.createElement('div');
       card.className = 'card';
+      card.id = 'card-' + products[i].nome
 
       const picture = document.createElement('img');
       picture.className = 'img-product'
@@ -76,6 +83,7 @@ function atualizarListaProdutos() {
       const btnCart = document.createElement('button')
       btnCart.type = 'button'
       btnCart.id = 'cart-btn'
+      btnCart.className = 'card-' + products[i].nome
       const addToCart = document.createElement('i')
       addToCart.classList = 'fa-solid fa-plus'
       btnCart.append(addToCart)
@@ -86,33 +94,5 @@ function atualizarListaProdutos() {
    }
 }
 
-function modal() {
-   const modal = document.querySelector('.modal')
-   modal.classList.remove('display')
-
-   const backBtn = document.querySelector('.back').addEventListener('click', function() {
-      modal.classList.add('display')
-   })
-}
-
-if (person === 'Cleyton de Jesus Conceição Souza' && email === 'bigcleyton@gmail.com' && cpf === '494.043.608-05') {
-   registerBtn.addEventListener('click', modal)
-   const creatProduct = document.getElementById('creat-button')
-   creatProduct.addEventListener('click', function() {
-      const modal = document.querySelector('.modal')
-      modal.classList.remove('display')
-
-      const productName = document.getElementById('name-product').value
-      const url = document.getElementById('urlImage').value
-      const preco = document.getElementById('price-product').value
-      const peso = document.getElementById('peso-product').value
-      
-      cadastrarProduct(url, productName, preco, peso)
-      atualizarListaProdutos()
-
-      modal.classList.add('display')
-   })
    console.log(products)
-} else {
-   registerBtn.classList.add('display')
-}
+   atualizarListaProdutos()
