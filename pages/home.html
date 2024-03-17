@@ -23,14 +23,31 @@
          <nav>
             <a href="#">Produtos</a>
             <a href="#">Contatos</a>
-            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-         </nav>
+            <a href="#"><i class="fa-solid fa-cart-shopping nav-cart"></i></a>
+         </nav> 
 
          <h3>Bem-vindo, <span id="person"> </span><span id="circle"></span></h3>
       </header>
 
       <div id="container-products"></div>
    </main>
+   <div class="carrinho">
+      <div class="first-childs">
+         <h2>Seu Carrinho</h2>
+         <i class="fa-solid fa-plus close-cart"></i>
+      </div>
+      <div class="total-comprar">
+         <div class="itens-details">
+            <p>Itens: <span id="itens">0</span></p>
+            <p>Total: R$ <span id="total-price">00,00</span></p>
+         </div>
+         <button type="button" id="buy-button">FAZER PEDIDO</button>
+      </div>
+
+      <div class="vazio-div">
+         <h2 class="vazio">Carrinho Vazio</h2>
+      </div>
+   </div>
 
    <script src="../js/home.js"></script>
 

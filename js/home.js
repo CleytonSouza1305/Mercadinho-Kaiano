@@ -9,21 +9,63 @@ const cpf = localStorage.getItem('cpf')
 const registerBtn = document.getElementById('register-button')
 
 const products = [
-   {picture: 'https://img.freepik.com/fotos-gratis/uvas-suculentas-em-uma-videira-um-sabor-refrescante-da-natureza-gerado-pela-inteligencia-artificial_25030-63003.jpg', nome: 'Uva', price: '20,00', peso: '500g'},
+   {picture: 'https://www.embrapa.br/bme_images/o/111760040o.jpg', nome: 'Maça Gala', price: '6,99', peso: '1kg'},
 
-   {picture: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfNmhPqa0vtypbOkWQCZ1dtWPec3Ay_V1HhA&usqp=CAU', nome: 'Melancia', price: '45,00', peso: '5Kg'},
+   {picture: 'https://i.ytimg.com/vi/TWtgMFkigHo/maxresdefault.jpg', nome: 'Maça Fuji', price: '8,99', peso: '1kg'},
 
-   {picture: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcST1HQ8EGuqCApTNARzi8wm9N_mXhAK6BQSgQ&usqp=CAU', nome: 'Laranja', price: '19,99', peso: '2Kg'},
+   {picture: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1KRY68pGrnRsOApvlMwNGxwe_yoOyKkDbEZfvsHJyEAAJFCQdxJ-BgIEyLZQZcH0zSrk&usqp=CAU', nome: 'Maça Verde', price: '7,99', peso: '1Kg'},
 
-   {picture: 'https://noticiasconcursos.com.br/wp-content/uploads/2022/02/noticiasconcursos.com.br-como-escolher-banana-no-mercado-conheca-os-tipos-dicas-para-escolher-banana-no-mercado-reproducao-canva.jpg', nome: 'Banana', price: '11,99', peso: '500g'},
+   {picture: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcST1HQ8EGuqCApTNARzi8wm9N_mXhAK6BQSgQ&usqp=CAU', nome: 'Laranja Pera', price: '3,99', peso: '2Kg'},
 
-   {picture: 'https://cdn.noticiasagricolas.com.br/dbimagens/thumbs/1200x600-ar/7fccc1de0ff9803eae05c77f6d2536ca.jpg', nome: 'Manga', price: '4,99', peso: '1Kg'},
+   {picture: 'https://villalvafrutas.com.br/wp-content/uploads/2019/05/site123456-870x500.jpg', nome: 'Laranja Lima', price: '11,99', peso: '1Kg'},
 
-   {picture: 'https://noticiasconcursos.com.br/wp-content/uploads/2022/03/noticiasconcursos.com.br-como-escolher-kiwi-no-mercado-saiba-como-escolher-e-onde-usar-a-fruta-como-escolher-kiwi-no-mercado-saiba-como-escolher-e-onde-usar-a-fruta-reproducao-canva.jpg', nome: 'Kiwi', price: '6,99', peso: '500g'},
+   {picture: 'https://www.eusemfronteiras.com.br/wp-content/uploads/2023/01/oranges-g9b9042839_1280.jpg', nome: 'Laranja da Terra', price: '9.99', peso: '1kg'},
 
-   {picture: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbC1KukdEZUSWBHVz_GXrpjHT4qsyi7wJ8GQ&usqp=CAU', nome: 'Morango', price: '09,99', peso: '450g'},
+   {picture: 'https://villalvafrutas.com.br/wp-content/uploads/2018/04/251656151656565115.jpg', nome: 'Mexerica', price: '8,88', peso: '1Kg'},
 
-   {picture: 'https://www.hfbrasil.org.br/upload/galeria/thumbnail/0800829001584127068.jpg', nome: 'Mamão', price: '11,99', peso: '1Kg'}
+   {picture: 'https://gastronomiacarioca.zonasul.com.br/wp-content/uploads/2023/08/pera.png', nome: 'Pêra Européia', price: '18,99', peso: '1Kg'},
+
+   {picture: 'https://http2.mlstatic.com/D_NQ_NP_985506-MLB28688813355_112018-O.webp', nome: 'Pêra Asiática', price: '29,99', peso: '1Kg'},
+
+   {picture: 'https://diariodonordeste.verdesmares.com.br/image/contentid/policy:1.3193943:1645120247/Pessegos-2.jpg?f=default&$p$f=7416c43', nome: 'Pêssego', price: '22,99', peso: '1Kg'},
+
+   {picture: 'https://s2-g1.glbimg.com/VedLlgUmjgBDYijkoAmAfTHP_PQ=/0x0:1310x767/1008x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2021/m/W/ifgM2vS6erslkALA7TzA/uvas1.jpg', nome: 'Uva Crimson', price: '29,99', peso: '800g'},
+
+   {picture: 'https://img.freepik.com/fotos-gratis/uvas-suculentas-em-uma-videira-um-sabor-refrescante-da-natureza-gerado-pela-inteligencia-artificial_25030-63003.jpg', nome: 'Uva Vermelha', price: '20,00', peso: '500g'},
+
+   {picture: 'https://static.ndmais.com.br/2024/03/istock-1495108380.jpg', nome: 'Melancia', price: '54,99', peso: '15Kg'},
+
+   {picture: 'https://ceagesp.gov.br/wp-content/uploads/2015/12/melao_amarelo-600x469.jpg', nome: 'Melão Amarelo', price: '8,99', peso: '1Kg'},
+
+   {picture: 'https://www.hfbrasil.org.br/upload/galeria/0934850001607699112.jpg', nome: 'Melão Gália', price: '9,99', peso: '1Kg'},
+
+   {picture: 'https://nutritotal.com.br/publico-geral/wp-content/uploads/2021/05/beneficios-do-abacaxi-2.jpg', nome: 'Abacaxi', price: '11,99', peso: '1Kg'},
+
+   {picture: 'https://noticiasconcursos.com.br/wp-content/uploads/2022/02/noticiasconcursos.com.br-como-escolher-banana-no-mercado-conheca-os-tipos-dicas-para-escolher-banana-no-mercado-reproducao-canva.jpg', nome: 'Banana Prata', price: '6,99', peso: '500g'},
+
+   {picture: 'https://cdn.fruta.com.br/wp-content/uploads/2019/10/sh_banana-nanica_1528942169-1.jpg', nome: 'Banana Nanica', price: '9,90', peso: '1Kg'},
+
+   {picture: 'https://static.tuasaude.com/media/article/xb/cz/banana-da-terra_61080_l.jpg', nome: 'Banana da Terra', price: '10,99', peso: '1Kg'},
+   
+   {picture: 'https://s5.static.brasilescola.uol.com.br/be/2023/10/interior-mamao.jpg', nome: 'Mamão', price: '17,99', peso: '1,5kg'},
+
+   {picture: 'https://boomi.b-cdn.net/wp-content/uploads/2022/02/Carambola-faz-mal-a-saude-Veja-beneficios-e-contraindicacoes.png', nome: 'Carambola', price: '14,49', peso: '1Kg'},
+
+   {picture: 'https://euorganico.eco.br/cdn/shop/products/limao-taiti.jpg?v=1639422284', nome: 'Limão Taiti', price: '5,99', peso: '1Kg'},
+
+   {picture: 'https://images.tcdn.com.br/img/img_prod/1017342/mudas_de_limao_siciliano_49_1_5f376a7f0516d0f0d25aebc147053ff6.jpg', nome: 'Limão Siciliano', price: '29,98', peso: '1Kg'},
+
+   {picture: 'https://2.bp.blogspot.com/-i79M7FLOuws/WQY-tXJPsfI/AAAAAAAAW7Y/McyWvHyvX-YETBuCrAyrcrE4N0Icr6bGwCLcB/s1600/Limao%2Bcravo%2Bsanguineo%2Bcitrus%2Blimonia%2Bmudas%2B2.jpg', nome: 'Limão Cravo', price: '9,79', peso: '500g'},
+
+   {picture: 'https://www.mahta.bio/cdn/shop/files/Rectangle_39961_bbdb95d7-2681-4060-b5ef-28f857692540.png?v=1683395104&width=1717', nome: 'Coco Seco', price: '4,99', peso: '1Kg'},
+
+   {picture: 'https://noticiasconcursos.com.br/wp-content/uploads/2022/03/noticiasconcursos.com.br-como-escolher-kiwi-no-mercado-saiba-como-escolher-e-onde-usar-a-fruta-como-escolher-kiwi-no-mercado-saiba-como-escolher-e-onde-usar-a-fruta-reproducao-canva.jpg', nome: 'Kiwi', price: '13,99', peso: '500g'},
+
+   {picture: 'https://nutritotal.com.br/publico-geral/wp-content/uploads/2020/02/shutterstock_385801849.jpg', nome: 'Manga', price: '4,19', peso: '500g'},
+
+   {picture: 'https://conteudo.imguol.com.br/c/entretenimento/78/2018/02/28/morango-1519823853148_v2_4x3.jpg', nome: 'Morango', price: '16, 50', peso: '300g'},
+
+   {picture: '', nome: '', price: '', peso: ''},
 
 ] 
 
@@ -50,6 +92,7 @@ function atualizarListaProdutos() {
       const price = document.createElement('span');
       price.classList = 'product-price'
       price.innerHTML = 'Preço: R$' + products[i].price;
+      price.id = products[i].price
 
       const peso = document.createElement('span')
       peso.classList = 'peso'
@@ -83,7 +126,7 @@ function atualizarListaProdutos() {
       const btnCart = document.createElement('button')
       btnCart.type = 'button'
       btnCart.id = 'cart-btn'
-      btnCart.className = 'card-' + products[i].nome
+      btnCart.className = 'cart-buy'
       const addToCart = document.createElement('i')
       addToCart.classList = 'fa-solid fa-plus'
       btnCart.append(addToCart)
@@ -96,3 +139,154 @@ function atualizarListaProdutos() {
 
    console.log(products)
    atualizarListaProdutos()
+   
+   const cartAbrir = document.querySelector('.fa-cart-shopping').addEventListener('click', function() {
+      const cart = document.querySelector('.carrinho')
+      cart.classList.toggle('opened')
+   })
+   
+
+   document.querySelectorAll('.mais').forEach(function(moreBtn) {
+     moreBtn.addEventListener('click', function() {
+      const number = moreBtn.parentElement.querySelector('.number')
+      number.innerHTML ++
+     })
+   })
+
+   document.querySelectorAll('.menos').forEach(function(menosBtn) {
+      menosBtn.addEventListener('click', function() {
+       const number = menosBtn.parentElement.querySelector('.number')
+       if (number.innerHTML === '0') {
+         number.innerHTML === '0'
+       } else {
+         number.innerHTML --
+       }
+      })
+    })
+
+   document.querySelectorAll('.cart-buy').forEach(function (buyButton) {
+      buyButton.addEventListener('click', function() {
+         
+         const card = buyButton.closest('.card')
+         const quantidadesss = parseFloat(card.querySelector('.number').textContent)
+         const priceString = card.querySelector('.product-price').textContent;
+         const price = parseFloat(priceString.replace('Preço: R$', '').replace(',', '.'))
+
+        if (quantidadesss > 0) {
+         const vazioEl = document.querySelector('.vazio-div')
+         vazioEl.style.display = 'none'
+
+         const cart = document.querySelector('.carrinho')
+         cart.classList.add('opened')
+
+         const nameh3 = card.querySelector('h3').textContent
+         const img = card.querySelector('.img-product').src
+         const peso = card.querySelector('.peso').textContent
+
+         const idPreco = price
+         const quantidade = card.querySelector('.number').textContent
+
+         const carrinhoDiv = document.querySelector('.carrinho')
+         const div = document.createElement('div')
+         const divdad = document.createElement('div')
+         const firstcontainer = document.createElement('div')
+         firstcontainer.className = 'first-container'
+         divdad.className = 'div-dad'
+
+         const imageElement = document.createElement('img')
+         imageElement.className = 'cart-img'
+         imageElement.src = img
+
+         const h3 = document.createElement('h3')
+         h3.className = 'cart-name'
+         h3.innerHTML = nameh3
+
+         const divSecondDad = document.createElement('div')
+
+         const preco = document.createElement('h4')
+         preco.className = 'quantidade-price'
+         const quantidadeEl = document.createElement('h4')
+         quantidadeEl.className = 'quantidade-item'
+
+         const totalPrice = idPreco * quantidadesss
+         preco.innerHTML = 'R$' + totalPrice
+
+         const deleteItem = document.createElement('i')
+         deleteItem.className = "fa-solid fa-trash lixeira"
+
+         divSecondDad.className = 'second-dad'
+         divSecondDad.append(preco, deleteItem)
+
+         quantidadeEl.innerHTML = quantidade
+
+         firstcontainer.append(h3, peso, quantidadeEl)
+
+         divdad.append(imageElement, firstcontainer, divSecondDad)
+         div.append(divdad)
+         carrinhoDiv.append(div)
+
+         let totalItens = 0
+         let precoFinal = 0
+
+         document.querySelectorAll('.quantidade-item').forEach(function(el) {
+          
+            totalItens += parseFloat(el.textContent)
+            const itens = document.getElementById('itens')
+            itens.innerHTML = totalItens
+         })
+
+         document.querySelectorAll('.quantidade-price').forEach(function(el) {
+            const precoString = el.textContent.replace('R$', '')
+            const price = parseFloat(precoString)
+            precoFinal += price
+         }) 
+
+         precoFinal = parseFloat(precoFinal.toFixed(2))
+         const prices = document.getElementById('total-price')
+         prices.innerHTML = precoFinal
+
+         document.querySelectorAll('.lixeira').forEach(function(el) {
+            el.addEventListener('click', function() {
+               const divDad = el.closest('.div-dad')
+               divDad.remove()
+
+               let totalItens = 0
+               let precoFinal = 0
+      
+               document.querySelectorAll('.quantidade-item').forEach(function(el) {
+                
+                  totalItens += parseFloat(el.textContent)
+               })
+
+               const itens = document.getElementById('itens')
+                  itens.innerHTML = totalItens
+
+                  if (itens.innerHTML === '0') {
+                     vazioEl.style.display = 'block'
+                  }
+      
+               document.querySelectorAll('.quantidade-price').forEach(function(el) {
+                  const precoString = el.textContent.replace('R$', '')
+                  const price = parseFloat(precoString)
+                  precoFinal += price
+   
+               })
+               
+               precoFinal = parseFloat(precoFinal.toFixed(2))
+               const prices = document.getElementById('total-price')
+               prices.innerHTML = precoFinal
+      
+            })
+         })
+        }
+      })
+
+      document.querySelector('.close-cart').addEventListener('click', function() {
+         const cart = document.querySelector('.carrinho')
+         cart.classList.remove('opened')
+      })
+   })
+
+
+ 
+  

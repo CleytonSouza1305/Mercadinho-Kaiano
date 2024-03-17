@@ -49,10 +49,20 @@ h1 {
    margin-left: 0.5rem;
 }
 
+nav {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 1rem;
+}
+
+nav .nav-cart {
+   font-size: 1.5rem;
+}
+
 nav a {
    font-size: 1.2rem;
-   margin: 0 0.5rem;
-   padding: 0.75rem;
+   padding: 1rem;
    transition: ease-in-out 300ms;
    position: relative;
 }
@@ -157,3 +167,113 @@ h3 {
    background-color: hsl(210, 100%, 22%);
 }
 
+.carrinho {
+   background-color: #dfdede;
+   position: fixed;
+   top: 0;
+   right: -400px;
+   transition: right 0.3s ease-in-out;
+   height: 100vh;
+   width: 25vw;
+   padding: 1rem;
+   overflow-y: scroll;
+   overflow-x: hidden;
+}
+
+.carrinho.opened {
+   right: 0; 
+ }
+
+.carrinho h2 {
+   margin-right: 5.3rem;
+   padding: 1rem;
+}
+
+.carrinho .cart-img {
+   width: 6rem;
+   height: 5rem;
+   object-fit: cover;
+   object-position: center center;
+   border-radius: 3px;
+}
+
+.first-container {
+   text-align: center;
+}
+
+.div-dad {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   margin: 1rem 0;
+}
+
+.total-comprar {
+   background-color: var(--white);
+   width: 100%;
+   padding: 0.5rem 1rem;
+   bottom: 0;
+   display: flex;
+   justify-content: space-between;
+   flex-direction: column;
+   border-radius: 4px;
+}
+
+.total-comprar button {
+   margin: 1rem 0;
+   background-color: var(--blue);
+   color: var(--white);
+   padding: 0.75em 1.5em;
+   border-radius: 6px;
+}
+
+.itens-details {
+   display: flex;
+   justify-content: space-between;
+}
+
+.total-comprar p {
+   font-size: 1.3rem;
+   font-weight: bold;
+}
+
+.first-childs {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   flex-direction: row-reverse;
+}
+
+.first-childs i {
+   font-weight: bold;
+   color: #f64348;
+   font-size: 2rem;
+   cursor: pointer;
+   transform: rotate(135deg);
+}
+
+.fa-solid.fa-trash {
+   color: #f64348;
+   cursor: pointer;
+   padding: 0.8rem;
+}
+
+.second-dad {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   flex-direction: column;
+   gap: 1rem;
+}
+
+.vazio-div {
+   display: flex;
+   align-items: center;
+   position: absolute;
+   top: 25rem;
+   left: 5.5rem;
+}
+
+h2.vazio {
+   text-align: center;
+}
