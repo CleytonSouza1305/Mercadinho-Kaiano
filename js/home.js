@@ -9,27 +9,27 @@ const cpf = localStorage.getItem('cpf')
 const registerBtn = document.getElementById('register-button')
 
 const products = [
-   {picture: 'https://www.embrapa.br/bme_images/o/111760040o.jpg', nome: 'Maça Gala', price: '6,99', peso: '1kg'},
+   {picture: '../img/img-fruits/maca-gala.jpg', nome: 'Maça Gala', price: '6,99', peso: '1kg'},
 
-   {picture: 'https://i.ytimg.com/vi/TWtgMFkigHo/maxresdefault.jpg', nome: 'Maça Fuji', price: '8,99', peso: '1kg'},
+   {picture: '../img/img-fruits/maca-fuji.jpg', nome: 'Maça Fuji', price: '8,99', peso: '1kg'},
 
-   {picture: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1KRY68pGrnRsOApvlMwNGxwe_yoOyKkDbEZfvsHJyEAAJFCQdxJ-BgIEyLZQZcH0zSrk&usqp=CAU', nome: 'Maça Verde', price: '7,99', peso: '1Kg'},
+   {picture: '../img/img-fruits/maca-verde.jpg', nome: 'Maça Verde', price: '7,99', peso: '1Kg'},
 
-   {picture: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcST1HQ8EGuqCApTNARzi8wm9N_mXhAK6BQSgQ&usqp=CAU', nome: 'Laranja Pera', price: '3,99', peso: '2Kg'},
+   {picture: '../img/img-fruits/laranja-pera.jpg', nome: 'Laranja Pera', price: '3,99', peso: '2Kg'},
 
-   {picture: 'https://villalvafrutas.com.br/wp-content/uploads/2019/05/site123456-870x500.jpg', nome: 'Laranja Lima', price: '11,99', peso: '1Kg'},
+   {picture: '../img/img-fruits/laranja-lima.jpg', nome: 'Laranja Lima', price: '11,99', peso: '1Kg'},
 
-   {picture: 'https://www.eusemfronteiras.com.br/wp-content/uploads/2023/01/oranges-g9b9042839_1280.jpg', nome: 'Laranja da Terra', price: '9.99', peso: '1kg'},
+   {picture: '../img/img-fruits/laranja-da-terra.webp', nome: 'Laranja da Terra', price: '9.99', peso: '1kg'},
 
-   {picture: 'https://villalvafrutas.com.br/wp-content/uploads/2018/04/251656151656565115.jpg', nome: 'Mexerica', price: '8,88', peso: '1Kg'},
+   {picture: '../img/img-fruits/mexerica.jpg', nome: 'Mexerica', price: '8,88', peso: '1Kg'},
 
-   {picture: 'https://gastronomiacarioca.zonasul.com.br/wp-content/uploads/2023/08/pera.png', nome: 'Pêra Européia', price: '18,99', peso: '1Kg'},
+   {picture: '../img/img-fruits/pera-europeia.webp', nome: 'Pêra Européia', price: '18,99', peso: '1Kg'},
 
-   {picture: 'https://http2.mlstatic.com/D_NQ_NP_985506-MLB28688813355_112018-O.webp', nome: 'Pêra Asiática', price: '29,99', peso: '1Kg'},
+   {picture: '../img/img-fruits/pera-asiatica.webp', nome: 'Pêra Asiática', price: '29,99', peso: '1Kg'},
 
-   {picture: 'https://diariodonordeste.verdesmares.com.br/image/contentid/policy:1.3193943:1645120247/Pessegos-2.jpg?f=default&$p$f=7416c43', nome: 'Pêssego', price: '22,99', peso: '1Kg'},
+   {picture: '../img/img-fruits/pessego.jpg', nome: 'Pêssego', price: '22,99', peso: '1Kg'},
 
-   {picture: 'https://s2-g1.glbimg.com/VedLlgUmjgBDYijkoAmAfTHP_PQ=/0x0:1310x767/1008x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2021/m/W/ifgM2vS6erslkALA7TzA/uvas1.jpg', nome: 'Uva Crimson', price: '29,99', peso: '800g'},
+   {picture: '../img/img-fruits/uva-crimson.webp', nome: 'Uva Crimson', price: '29,99', peso: '800g'},
 
    {picture: 'https://img.freepik.com/fotos-gratis/uvas-suculentas-em-uma-videira-um-sabor-refrescante-da-natureza-gerado-pela-inteligencia-artificial_25030-63003.jpg', nome: 'Uva Vermelha', price: '20,00', peso: '500g'},
 
