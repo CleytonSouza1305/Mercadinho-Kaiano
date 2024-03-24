@@ -29,7 +29,6 @@ main {
 .container {
    background-color: var(--white);
    color: var(--black);
-   box-shadow: 0 0 10px 5px rgb(244, 244, 244, 0.8);
    border-radius: 0.5rem;
    padding: 0.5rem 1rem 1rem;
 }
